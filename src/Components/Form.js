@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import { useHistory } from "react-router-dom";
 
 
@@ -8,28 +8,40 @@ import { FORM} from 'react-bootstrap';
 export default function SearchForm({handleSearchJobsByValue}) {
   const history = useHistory();
   
-  const initialSearch ={
-    search:" "
-  }
+  const initialSearch ="";
   
-  const [searchValue,setSearchValue]= useState("initialSearch");
+  
+  const [searchValue,setSearchValue]= useState(initialSearch);
+  const [value,setValue]= useState();
   
   const handleChange = (e) => {
     console.log(e.target.value)
-    setSearchValue(e.target.value) 
+    setValue(e.target.value) 
   }
   
   
   const handleSubmit = (e)=> {
     e.preventDefault();
-    setSearchValue(e.target.value);
-    history.push("/results");
-    console.log ("funciona boton");
+    handleSearchJobsByValue(value);
     
+    console.log ("funciona boton");
+  
+    setSearchValue(value);
+     
   }  
        
- 
-  handleSearchJobsByValue(searchValue)
+
+  useEffect(() => {
+    
+    if(searchValue===!"")
+     {history.push("/results")}
+  
+        
+    
+    
+   
+    
+  }, [searchValue])
  
   
   
