@@ -13,7 +13,7 @@ My goal was to simulate a professional work environment.
 
 ## 2. How to navigate this project? 
 
-  -	I organized the app in different files inside scr:
+  -	I organized the app in different files inside src:
     - Components
     - Images (img)
     - Pages
@@ -27,7 +27,7 @@ My goal was to simulate a professional work environment.
 -	I used `useHistory` to navigate between pages.
 -	I didn't use `useContext` since I wanted to keep the project simple.
 -	I used `Flexbox` for positioning the different elements inside pages.
--	I used`Bootstrap-5` for styling. 
+-	I used `Bootstrap-4` for styling. 
 
 ## 4. If I had more time I would change: 
 -
