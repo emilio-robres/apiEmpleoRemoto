@@ -30,9 +30,9 @@ My goal was to simulate a professional work environment.
 -	I use`Bootstrap-5` for styling. 
 
 ## 4. If I had more time I would change: 
--	Set up continuous integration to run the tests and ESLint on every Pull Request 
--	Refactor some of the code. Especially this part [link to code on GitHub] - Add end-to-end tests with Cypress. 
 -
+-
+
 ## 5. Available Scripts 
 - npm install
 - npm start
