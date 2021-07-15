@@ -7,7 +7,7 @@
 
 My goal was to simulate a professional work environment.  
 
-  * I built this app based on my own Figma designs reproducing JOB TODAY website: [Screenshot of designs]
+  * I built this app based on my own Figma designs reproducing JOB TODAY website: https://www.figma.com/file/40j2OEQJDKFvyk5R0uPrXY/BA-Sprint-9-TEST?node-id=4%3A10
   * I used github commands to control sucesivas versions of the app
   * I used React.js for coding
 
