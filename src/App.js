@@ -13,7 +13,7 @@ export default function App() {
   const handleSearchJobsByValue = (data) => {
 
     console.log("App", data);
-debugger
+
     setFinalSearchValue(data);
 
 

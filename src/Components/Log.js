@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Log = () => {
     return (
         <div className="log">
@@ -11,3 +12,5 @@ const Log = () => {
 }
 
 export default Log
+
+

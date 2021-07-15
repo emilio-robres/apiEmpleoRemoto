@@ -48,23 +48,23 @@ export default function SearchForm({handleSearchJobsByValue}) {
     return ( 
      
           
-<form className="col col-6" onSubmit={handleSubmit}>
- <div className="formulario">
-    
+<div className="row" onSubmit={handleSubmit}>
+  <div className="col-xs-6 mr-4">
       <input type="text" 
       className="form-control mb-2" 
       placeholder="Descripción"
       onChange={handleChange}/>
-   
-    
+  </div> 
+
+
+  <div className="col-xs-3">    
       <button type="submit" 
               className="btn btn-primary mb-2"
               // onClick={handleSearchJobsByValue}
               >Busca Empleo
       </button>
-    
   </div>
-</form>
+</div>
 
   );
 }
