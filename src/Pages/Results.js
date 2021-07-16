@@ -7,35 +7,37 @@ import { useHistory } from "react-router-dom";
 
 
 
-const Results = ({finalSearchValue}) => {
-const history = useHistory();
-const handleOnClick = () => {history.push("/")}
+ 
+const Results = ({ finalSearchValue }) => {
+   
+    const history = useHistory();
+    const handleOnClick = () => { history.push("/") }
     return (
-    <body>   
-        <div>
-            <div className="resultados">
-                <div className="header-results">
-                    <Logo/>
-                    <button type="button" 
+        <body>
+            <div>
+                <div className="resultados">
+                    <div className="header-results">
+                        <Logo />
+                        <button type="button"
                             class="btn btn-secondary btn-sm"
                             onClick={handleOnClick}>Nueva Busqueda</button>
-                    <Log/>
-                </div>
-            
-            </div>
-   
-            
-            <div className="container">
+                        <Log />
+                    </div>
+
                     <div className="row">
                         <div className="col-md-4">
-                            <GetJobs finalSearchValue={finalSearchValue}/>
-                           
-                        </div>   
+                            <GetJobs finalSearchValue={finalSearchValue} />
+                       
+                        </div>
                     </div>
-                
-            </div>    
-        </div>
-    </body> 
+                </div>
+
+
+
+
+
+            </div>
+        </body>
     )
 }
 

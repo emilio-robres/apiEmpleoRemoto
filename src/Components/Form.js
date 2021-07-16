@@ -1,70 +1,61 @@
-import React, {useState,useEffect} from "react";
+import React, { useState,useEffect} from "react";
 import { useHistory } from "react-router-dom";
+import { form } from 'react-bootstrap';
 
 
-import { FORM} from 'react-bootstrap';
-
-
-export default function SearchForm({handleSearchJobsByValue}) {
+export default function SearchForm({ handleSearchJobsByValue }) {
   const history = useHistory();
-  
-  const initialSearch ="";
-  
-  
-  const [searchValue,setSearchValue]= useState(initialSearch);
-  const [value,setValue]= useState();
-  
+  // const initialSearch ="";
+
+
+  const [searchValue, setSearchValue] = useState("");
+  // const [value, setValue] = useState();
+
   const handleChange = (e) => {
     console.log(e.target.value)
-    setValue(e.target.value) 
+    setSearchValue(e.target.value);
   }
-  
-  
-  const handleSubmit = (e)=> {
+
+
+
+ 
+ const handleSubmit = (e) => {
     e.preventDefault();
-    handleSearchJobsByValue(value);
+    console.log("funciona boton");
+    handleSearchJobsByValue({searchValue})
+    history.push("/results")
+  }
+
     
-    console.log ("funciona boton");
-  
-    setSearchValue(value);
-     
-  }  
-       
 
   useEffect(() => {
-    
-    if(searchValue===!"")
-     {history.push("/results")}
-  
-        
-    
-    
-   
-    
+    if (searchValue ===!"") {
+      history.push("/")
+      
+    } else {console.log("nada") };
   }, [searchValue])
- 
-  
-  
-    return ( 
-     
-          
-<div className="row" onSubmit={handleSubmit}>
-  <div className="col-xs-6 mr-4">
-      <input type="text" 
-      className="form-control mb-2" 
-      placeholder="Descripción"
-      onChange={handleChange}/>
-  </div> 
+
+  return (
+<form class="container-fluid" onSubmit={handleSubmit}>
+    
+      <div className="row" >
+        <div className="col-8 ml-4 mr-4">
+          <input type="text" 
+            className="form-control"
+            placeholder="Descripción"
+            onChange={handleChange}/>
+        </div>
 
 
-  <div className="col-xs-3">    
-      <button type="submit" 
-              className="btn btn-primary mb-2"
-              // onClick={handleSearchJobsByValue}
-              >Busca Empleo
-      </button>
-  </div>
-</div>
-
+        <div className="col-xs-5" >
+          <button type="submit" 
+            className="btn btn-primary"
+          // onClick={handleSearchJobsByValue}
+          >Busca Empleo
+          </button>
+        </div>
+      </div>
+    
+</form>    
   );
 }

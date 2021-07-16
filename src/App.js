@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function App() {
   
-  const [finalSearchValue, setFinalSearchValue] = useState(" ");
+  const [finalSearchValue, setFinalSearchValue] = useState("");
   const handleSearchJobsByValue = (data) => {
 
     console.log("App", data);
