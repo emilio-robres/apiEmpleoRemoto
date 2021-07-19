@@ -1,15 +1,15 @@
-import React, { useState,useEffect} from "react";
+import React, { useState} from "react";
 import { useHistory } from "react-router-dom";
-import { form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 
 export default function SearchForm({ handleSearchJobsByValue }) {
   const history = useHistory();
-  // const initialSearch ="";
+
 
 
   const [searchValue, setSearchValue] = useState("");
-  // const [value, setValue] = useState();
+
 
   const handleChange = (e) => {
     console.log(e.target.value)
@@ -28,18 +28,18 @@ export default function SearchForm({ handleSearchJobsByValue }) {
 
     
 
-  useEffect(() => {
-    if (searchValue ===!"") {
-      history.push("/")
+  // useEffect(() => {
+  //   if (searchValue === false) {
+  //     history.push("/")
       
-    } else {console.log("nada") };
-  }, [searchValue])
+  //   } else {console.log("nada") };
+  // }, [searchValue])
 
   return (
-<form class="container-fluid" onSubmit={handleSubmit}>
+<Form class="container-fluid" onSubmit={handleSubmit}>
     
-      <div className="row" >
-        <div className="col-8 ml-4 mr-4">
+      <div className="d-flex flex-row align-items-center justify-content-center" >
+        <div className="col-12">
           <input type="text" 
             className="form-control"
             placeholder="Descripción"
@@ -56,6 +56,6 @@ export default function SearchForm({ handleSearchJobsByValue }) {
         </div>
       </div>
     
-</form>    
+</Form>    
   );
 }
