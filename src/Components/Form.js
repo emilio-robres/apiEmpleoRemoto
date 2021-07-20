@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form } from 'react-bootstrap';
 
@@ -8,8 +8,8 @@ export default function SearchForm({ handleSearchJobsByValue }) {
 
 
 
-  const [searchValue, setSearchValue] = useState("");
-
+  const [searchValue, setSearchValue] = useState("")
+ 
 
   const handleChange = (e) => {
     console.log(e.target.value)
@@ -17,38 +17,38 @@ export default function SearchForm({ handleSearchJobsByValue }) {
   }
 
 
-
  
- const handleSubmit = (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    handleSearchJobsByValue({searchValue})
+    handleSearchJobsByValue({ searchValue })
     history.push("/results")
   }
 
-    
 
- 
+
+
 
   return (
-<Form class="container" onSubmit={handleSubmit}>
-    
+    <Form class="container" onSubmit={handleSubmit}>
+
       <div className="d-flex flex-row align-items-center justify-content-center" >
         <div className="col-12">
-          <input type="text" 
+          <input type="text"
             className="form-control"
             placeholder="Descripción"
-            onChange={handleChange}/>
+            onChange={handleChange} />
         </div>
 
 
         <div className="col-xs-5" >
-          <button type="submit" 
+          <button type="submit"
             className="btn btn-primary"
           >Busca Empleo
           </button>
         </div>
       </div>
-    
-</Form>    
+
+    </Form>
   );
 }
