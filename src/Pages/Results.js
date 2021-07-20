@@ -24,10 +24,9 @@ const Results = ({ finalSearchValue }) => {
                         <Log />
                     </div>
 
-                    <div className="row d-flex mt-4 justify-content-center">
-                        <div className="col-md-10">
+                    <div className="row d-flex mt-4 mr-2 justify-content-center">
+                        <div className="col-md-6">
                             <GetJobs finalSearchValue={finalSearchValue} />
-                       
                         </div>
                     </div>
                 </div>

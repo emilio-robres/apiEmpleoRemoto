@@ -14,7 +14,6 @@ export default function App() {
   const handleSearchJobsByValue = (data) => {
     console.log("App", data.searchValue);
     setFinalSearchValue(data.searchValue);
-    console.log("App:" ,finalSearchValue)
   };
 
 
